@@ -1,10 +1,7 @@
 #include <iostream>
 #include <string>
 
-std::string get_greet(const std::string &who)
-{
-  return "Hello " + who;
-}
+#include "cpp/src/lib/greeting.h"
 
 int main(int argc, char **argv)
 {

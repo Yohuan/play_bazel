@@ -1,6 +1,7 @@
 import sys
 
-from python.lib import greeting
+# from python.lib import greeting
+from external_depedency.python.lib import greeting
 
 
 if __name__ == "__main__":

@@ -11,6 +11,6 @@ int main(int argc, char **argv)
     who = argv[1];
   }
 
-  std::cout << get_greet(who) << std::endl;
+  std::cout << Greet(who) << std::endl;
   return 0;
 }

@@ -2,4 +2,4 @@
 
 #include <string>
 
-std::string get_greet(const std::string &who);
+std::string Greet(const std::string &who);

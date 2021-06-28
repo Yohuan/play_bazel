@@ -6,6 +6,6 @@ namespace
 {
   TEST(Greeting, GetGreet)
   {
-    EXPECT_EQ(get_greet("yohuan"), "Hello yohuan");
+    EXPECT_EQ(Greet("yohuan"), "Hello yohuan");
   }
 }

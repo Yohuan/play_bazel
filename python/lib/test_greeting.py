@@ -4,8 +4,8 @@ from python.lib import greeting
 
 
 class TestGreeting(unittest.TestCase):
-    def test_get_great(self):
-        self.assertEqual(greeting.get_greet("yohuan"), "Hello yohuan")
+    def test_great(self):
+        self.assertEqual(greeting.greet("yohuan"), "Hello yohuan")
 
 
 if __name__ == "__main__":

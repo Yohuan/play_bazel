@@ -1,2 +1,2 @@
-def get_greet(who: str) -> str:
+def greet(who: str) -> str:
     return f"Hello {who}"

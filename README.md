@@ -71,3 +71,17 @@ bazel run //python:hello_world -- yohuan
 bazel test //python/lib:test_greeting
 bazel run //python/lib:test_greeting
 ```
+
+# Misc
+
+## 1. Build all targets in the workspace
+
+```bash
+bazel run //...
+```
+
+## 2. Run all tests in the workspace
+
+```bash
+bazel test //...
+```

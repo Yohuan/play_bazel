@@ -10,3 +10,7 @@ WORKDIR /src
 COPY . /src
 
 RUN bazel build //python:app
+
+ENTRYPOINT ["bazel", "run", "//python:app"]
+
+EXPOSE 3000

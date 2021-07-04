@@ -26,3 +26,10 @@ git_repository(
     remote = "https://github.com/Yohuan/play_bazel_external_dependency",
     tag = "v1.0",
 )
+
+load("@rules_python//python:pip.bzl", "pip_install")
+
+pip_install(
+    name = "pip_deps",
+    requirements = "//python:requirements.txt",
+)

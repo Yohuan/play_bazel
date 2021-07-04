@@ -8,3 +8,8 @@ py_binary(
         # "@external_depedency//python/lib:libgreeting"
     ],
 )
+
+py_binary(
+    name = "app",
+    srcs = ["app.py"],
+)

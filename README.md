@@ -72,6 +72,14 @@ bazel test //python/lib:test_greeting
 bazel run //python/lib:test_greeting
 ```
 
+## 5. Integrate with Docker
+
+Build image and run as a container
+
+```bash
+bazel run //python:docker_hello_world
+```
+
 # Misc
 
 ## 1. Build all targets in the workspace

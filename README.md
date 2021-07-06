@@ -77,7 +77,7 @@ bazel run //python/lib:test_greeting
 ## 1. Build all targets in the workspace
 
 ```bash
-bazel run //...
+bazel build //...
 ```
 
 ## 2. Run all tests in the workspace

@@ -4,7 +4,7 @@ cc_library(
     name = "libgreeting",
     srcs = ["greeting.cpp"],
     hdrs = ["greeting.h"],
-    visibility = ["//cpp/src:__pkg__"],
+    visibility = ["//cpp:__pkg__"],
 )
 
 cc_test(

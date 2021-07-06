@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "cpp/src/lib/greeting.h"
+#include "cpp/lib/greeting.h"
 
 int main(int argc, char **argv)
 {

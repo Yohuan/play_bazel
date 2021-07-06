@@ -1,0 +1,6 @@
+build --color=yes
+build --jobs=4
+
+test --jobs=4
+test --verbose_failures
+test --test_output=errors

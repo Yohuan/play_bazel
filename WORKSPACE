@@ -48,3 +48,10 @@ load(
 )
 
 container_repositories()
+
+load(
+    "@io_bazel_rules_docker//python:image.bzl",
+    _py_image_repos = "repositories",
+)
+
+_py_image_repos()

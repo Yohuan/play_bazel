@@ -2,6 +2,8 @@
 
 This is a toy project to make me familiar with [Bazel](https://bazel.build/).
 
+Before everything, we need to [install Bazel](https://docs.bazel.build/versions/main/install.html).
+
 # C++
 
 ## 1. Build Executable

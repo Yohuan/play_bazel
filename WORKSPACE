@@ -68,3 +68,17 @@ container_pull(
     repository = "python",
     tag = "3.8",
 )
+
+container_pull(
+    name = "alpine_linux_amd64",
+    registry = "index.docker.io",
+    repository = "library/alpine",
+    tag = "3.8",
+)
+
+load("@io_bazel_rules_docker//contrib:dockerfile_build.bzl", "dockerfile_image")
+
+dockerfile_image(
+    name = "basic_alpine_dockerfile",
+    dockerfile = "//docker:Dockerfile",
+)

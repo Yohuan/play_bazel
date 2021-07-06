@@ -7,7 +7,7 @@ py_binary(
     srcs = ["hello_world.py"],
     deps = [
         "//python/lib:libgreeting",
-        # "@external_depedency//python/lib:libgreeting"
+        # "@external_dependency//python/lib:libgreeting"
     ],
 )
 

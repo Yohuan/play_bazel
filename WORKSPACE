@@ -33,7 +33,7 @@ pip_install(
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
-    name = "external_depedency",
+    name = "external_dependency",
     remote = "https://github.com/Yohuan/play_bazel_external_dependency",
     tag = "v1.0",
 )

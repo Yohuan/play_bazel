@@ -5,6 +5,6 @@ cc_binary(
     srcs = ["hello_world.cpp"],
     deps = [
         "//cpp/src/lib:libgreeting",
-        # "@external_depedency//cpp/src/lib:libgreeting",
+        # "@external_dependency//cpp/src/lib:libgreeting",
     ],
 )

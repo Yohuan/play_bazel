@@ -80,6 +80,35 @@ Build image and run as a container
 bazel run //python:docker_hello_world
 ```
 
+# Web Server
+
+Use python to create a simple web server by [Flask](https://flask.palletsprojects.com/en/2.0.x/).
+
+## 1. Build and Run Web Server
+
+```bash
+bazel run //python:app
+```
+
+Test the web server
+
+```bash
+curl localhost:3000/greeting
+Hello world
+```
+
+## 2. Integrate with Docker
+
+```bash
+bazel run //python:docker_app
+```
+
+Test the web server if it is running on 10.17.210.40
+
+```bash
+curl 10.17.210.40:3000/greeting
+Hello world
+```
 # Misc
 
 ## 1. Build all targets in the workspace

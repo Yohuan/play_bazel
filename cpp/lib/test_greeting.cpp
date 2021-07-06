@@ -1,4 +1,4 @@
-#include "cpp/src/lib/greeting.h"
+#include "cpp/lib/greeting.h"
 
 #include <gtest/gtest.h>
 

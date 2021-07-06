@@ -7,14 +7,14 @@ This is a toy project to make me familiar with [Bazel](https://bazel.build/).
 ## 1. Build Executable
 
 ```bash
-bazel build //cpp/src:hello_world
+bazel build //cpp:hello_world
 ```
 
 Execute the binary
 
 ```bash
-./bazel-bin/cpp/src/hello_world
-./bazel-bin/cpp/src/hello_world yohuan
+./bazel-bin/cpp/hello_world
+./bazel-bin/cpp/hello_world yohuan
 ```
 
 ## 2. Clean the Build Result
@@ -26,15 +26,15 @@ bazel clean
 ## 3.  Build & Run Executable
 
 ```bash
-bazel run //cpp/src:hello_world
-bazel run //cpp/src:hello_world -- yohuan
+bazel run //cpp:hello_world
+bazel run //cpp:hello_world -- yohuan
 ```
 
 ## 4. Build & Run Test
 
 ```bash
-bazel test //cpp/src/lib:test_greeting
-bazel run //cpp/src/lib:test_greeting
+bazel test //cpp/lib:test_greeting
+bazel run //cpp/lib:test_greeting
 ```
 
 # Python

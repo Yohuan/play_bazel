@@ -75,3 +75,10 @@ container_pull(
     repository = "library/alpine",
     tag = "3.8",
 )
+
+load("@io_bazel_rules_docker//contrib:dockerfile_build.bzl", "dockerfile_image")
+
+dockerfile_image(
+    name = "basic_alpine_dockerfile",
+    dockerfile = "//docker:Dockerfile",
+)

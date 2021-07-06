@@ -13,3 +13,10 @@ container_test(
     configs = ["//docker/test_configs:basic_alpine.yml"],
     image = ":basic_alpine",
 )
+
+container_test(
+    name = "test_basic_alpine_dockerfile",
+    configs = ["//docker/test_configs:basic_alpine.yml"],
+    driver = "tar",
+    image = "@basic_alpine_dockerfile//image:dockerfile_image",
+)

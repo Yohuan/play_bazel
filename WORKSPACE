@@ -55,3 +55,12 @@ load(
 )
 
 _py_image_repos()
+
+load("@io_bazel_rules_docker//container:pull.bzl", "container_pull")
+
+container_pull(
+    name = "py3_image_base",
+    registry = "index.docker.io",
+    repository = "python",
+    tag = "3.8",
+)

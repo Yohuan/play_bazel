@@ -1,6 +1,6 @@
 load("@rules_python//python:defs.bzl", "py_binary")
 load("@pip_deps//:requirements.bzl", "requirement")
-load("@io_bazel_rules_docker//python:image.bzl", "py3_image")
+load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
 
 py_binary(
     name = "hello_world",

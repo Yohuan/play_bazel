@@ -3,6 +3,7 @@ black==21.6b0
 click==8.0.1
 flake8==3.9.2
 Flask==2.0.1
+grpcio==1.38.1
 itsdangerous==2.0.1
 Jinja2==3.0.1
 MarkupSafe==2.0.1
@@ -12,5 +13,6 @@ pathspec==0.8.1
 pycodestyle==2.7.0
 pyflakes==2.3.1
 regex==2021.7.1
+six==1.16.0
 toml==0.10.2
 Werkzeug==2.0.1

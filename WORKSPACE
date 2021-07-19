@@ -1,5 +1,6 @@
 workspace(name = "myproject")
 
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # c++
@@ -48,12 +49,15 @@ rules_proto_toolchains()
 load("@rules_proto_grpc//python:repositories.bzl", rules_proto_grpc_python_repos = "python_repos")
 rules_proto_grpc_python_repos()
 
+git_repository(
+    name = "com_github_grpc_grpc",
+    remote = "https://github.com/grpc/grpc",
+    tag = "v1.35.0",
+)
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
 grpc_deps()
 
 # external registry dependency
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
-
 git_repository(
     name = "external_dependency",
     remote = "https://github.com/Yohuan/play_bazel_external_dependency",

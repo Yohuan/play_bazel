@@ -7,6 +7,8 @@ from protos import greeting_pb2
 from protos import greeting_pb2_grpc
 
 _NUM_WORKERS = 10
+_HOST = "0.0.0.0"
+_PORT = "5566"
 
 
 class Greeter(greeting_pb2_grpc.GreeterServicer):
@@ -17,7 +19,7 @@ class Greeter(greeting_pb2_grpc.GreeterServicer):
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=_NUM_WORKERS))
     greeting_pb2_grpc.add_GreeterServicer_to_server(Greeter(), server)
-    server.add_insecure_port("[::]:50051")
+    server.add_insecure_port(f"{_HOST}:{_PORT}")
     server.start()
     server.wait_for_termination()
 

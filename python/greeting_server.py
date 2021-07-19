@@ -3,8 +3,8 @@ import logging
 
 import grpc
 
-from python.lib.proto import greeting_pb2
-from python.lib.proto import greeting_pb2_grpc
+from protos import greeting_pb2
+from protos import greeting_pb2_grpc
 
 _NUM_WORKERS = 10
 

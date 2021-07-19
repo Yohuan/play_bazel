@@ -19,8 +19,10 @@ class Greeter(greeting_pb2_grpc.GreeterServicer):
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=_NUM_WORKERS))
     greeting_pb2_grpc.add_GreeterServicer_to_server(Greeter(), server)
-    server.add_insecure_port(f"{_HOST}:{_PORT}")
+    address = f"{_HOST}:{_PORT}"
+    server.add_insecure_port(address)
     server.start()
+    print(f"Listen on {address}")
     server.wait_for_termination()
 
 

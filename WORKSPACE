@@ -45,6 +45,9 @@ load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_
 rules_proto_dependencies()
 rules_proto_toolchains()
 
+load("@rules_proto_grpc//python:repositories.bzl", rules_proto_grpc_python_repos = "python_repos")
+rules_proto_grpc_python_repos()
+
 # external registry dependency
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 

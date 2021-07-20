@@ -1,7 +1,12 @@
 load("@rules_python//python:defs.bzl", "py_binary")
 load("@pip_deps//:requirements.bzl", "requirement")
 load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
-load("@rules_proto_grpc//python:defs.bzl", "python_grpc_library")
+load("@rules_proto_grpc//python:defs.bzl", "python_grpc_compile", "python_grpc_library")
+
+python_grpc_compile(
+    name = "greeter_python_grpc",
+    protos = ["//protos:greeter_grpc_proto"],
+)
 
 python_grpc_library(
     name = "greeter_grpc",

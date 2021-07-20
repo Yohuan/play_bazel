@@ -49,6 +49,9 @@ rules_proto_toolchains()
 load("@rules_proto_grpc//python:repositories.bzl", rules_proto_grpc_python_repos = "python_repos")
 rules_proto_grpc_python_repos()
 
+load("@rules_proto_grpc//php:repositories.bzl", rules_proto_grpc_php_repos = "php_repos")
+rules_proto_grpc_php_repos()
+
 git_repository(
     name = "com_github_grpc_grpc",
     remote = "https://github.com/grpc/grpc",

@@ -1,0 +1,14 @@
+{
+  "name": "grpc/php-demo",
+  "description": "gRPC example for PHP client",
+  "require": {
+    "grpc/grpc": "1.25.0",
+    "google/protobuf": "^v3.12.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "GPBMetadata\\": "GPBMetadata/",
+      "Greeting\\": "Greeting/"
+    }
+  }
+}

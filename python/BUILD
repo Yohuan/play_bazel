@@ -23,8 +23,8 @@ py_binary(
 )
 
 py_binary(
-    name = "app",
-    srcs = ["app.py"],
+    name = "flask_server",
+    srcs = ["flask_server.py"],
     deps = [
         requirement("flask"),
     ],
@@ -58,10 +58,10 @@ py3_image(
 )
 
 py3_image(
-    name = "docker_app",
-    srcs = ["app.py"],
+    name = "docker_flask_server",
+    srcs = ["flask_server.py"],
     layers = [
         requirement("flask"),
     ],
-    main = "app.py",
+    main = "flask_server.py",
 )

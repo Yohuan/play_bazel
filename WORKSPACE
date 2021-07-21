@@ -27,7 +27,7 @@ load("@rules_python//python:pip.bzl", "pip_install")
 
 pip_install(
     name = "pip_deps",
-    requirements = "//python:requirements.txt",
+    requirements = "//python/pip:requirements.txt",
 )
 
 # protobuf & grpc

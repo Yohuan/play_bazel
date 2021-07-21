@@ -1,5 +1,4 @@
 load("@rules_python//python:defs.bzl", "py_binary")
-load("@pip_deps//:requirements.bzl", "requirement")
 load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
 load("@rules_proto_grpc//python:defs.bzl", "python_grpc_compile", "python_grpc_library")
 
@@ -26,7 +25,7 @@ py_binary(
     name = "flask_server",
     srcs = ["flask_server.py"],
     deps = [
-        requirement("flask"),
+        "//python/pip:flask",
     ],
 )
 
@@ -36,7 +35,7 @@ py_binary(
     main = "greeting_server.py",
     deps = [
         ":greeter_grpc",
-        requirement("grpcio"),
+        "//python/pip:grpc",
     ],
 )
 
@@ -46,7 +45,7 @@ py_binary(
     main = "greeting_client.py",
     deps = [
         ":greeter_grpc",
-        requirement("grpcio"),
+        "//python/pip:grpc",
     ],
 )
 
@@ -61,7 +60,7 @@ py3_image(
     name = "docker_flask_server",
     srcs = ["flask_server.py"],
     layers = [
-        requirement("flask"),
+        "//python/pip:flask",
     ],
     main = "flask_server.py",
 )

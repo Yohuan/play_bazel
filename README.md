@@ -109,6 +109,33 @@ Test the web server if it is running on 10.17.210.40
 ```bash
 curl 10.17.210.40:3000/greeting
 ```
+
+# gPRC
+
+## 1. Build and Run a gRPC Server
+
+```bash
+bazel run //python:greeter_grpc_server
+```
+
+## 2. Build and Run a gRPC Client
+
+```bash
+bazel run //python:greeter_grpc_client
+```
+
+## 3. Compile gPRC Python Stubs
+
+```bash
+bazel build //python:greeter_python_grpc
+```
+
+## 3. Compile gPRC PHP Stubs
+
+```bash
+bazel build //php:greeter_php_grpc
+```
+
 # Misc
 
 ## 1. Build All Targets in the Workspace

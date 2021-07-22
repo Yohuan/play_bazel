@@ -2,39 +2,37 @@
 
 This is a toy project to make me familiar with [Bazel](https://bazel.build/).
 
-Before everything, we need to [install Bazel](https://docs.bazel.build/versions/main/install.html).
-
-This project uses Bazel with version 4.1.0
+Before everything, we need to [install Bazel](https://docs.bazel.build/versions/main/install.html) of version **4.1.0**.
 
 # C++
 
-## 1. Build Executable
+## 1. Build an Executable
 
 ```bash
 bazel build //cpp:hello_world
 ```
 
-Execute the binary
+Execute the built binary
 
 ```bash
 ./bazel-bin/cpp/hello_world
 ./bazel-bin/cpp/hello_world yohuan
 ```
 
-## 2. Clean the Build Result
+## 2. Clean the Built Result
 
 ```bash
 bazel clean
 ```
 
-## 3.  Build & Run Executable
+## 3.  Build & Run an Executable
 
 ```bash
 bazel run //cpp:hello_world
 bazel run //cpp:hello_world -- yohuan
 ```
 
-## 4. Build & Run Test
+## 4. Build & Run a Test
 
 ```bash
 bazel test //cpp/lib:test_greeting
@@ -43,33 +41,33 @@ bazel run //cpp/lib:test_greeting
 
 # Python
 
-## 1. Build Executable
+## 1. Build an Executable
 
 ```bash
 bazel build //python:hello_world
 ```
 
-Execute the binary
+Execute the built binary
 
 ```bash
 ./bazel-bin/python/hello_world
 ./bazel-bin/python/hello_world yohuan
 ```
 
-## 2. Clean the Build Result
+## 2. Clean the Built Result
 
 ```bash
 bazel clean
 ```
 
-## 3.  Build & Run Executable
+## 3.  Build & Run an Executable
 
 ```bash
 bazel run //python:hello_world
 bazel run //python:hello_world -- yohuan
 ```
 
-## 4. Build & Run Test
+## 4. Build & Run a Test
 
 ```bash
 bazel test //python/lib:test_greeting
@@ -78,7 +76,7 @@ bazel run //python/lib:test_greeting
 
 ## 5. Integrate with Docker
 
-Build image and run as a container
+Build an image and run as a container
 
 ```bash
 bazel run //python:docker_hello_world
@@ -86,42 +84,67 @@ bazel run //python:docker_hello_world
 
 # Web Server
 
-Use python to create a simple web server by [Flask](https://flask.palletsprojects.com/en/2.0.x/).
+Use python to create a simple web server with [Flask](https://flask.palletsprojects.com/en/2.0.x/).
 
-## 1. Build and Run Web Server
+## 1. Build and Run a Web Server
 
 ```bash
-bazel run //python:app
+bazel run //python:flask_server
 ```
 
 Test the web server
 
 ```bash
 curl localhost:3000/greeting
-Hello world
 ```
 
 ## 2. Integrate with Docker
 
 ```bash
-bazel run //python:docker_app
+bazel run //python:docker_flask_server
 ```
 
 Test the web server if it is running on 10.17.210.40
 
 ```bash
 curl 10.17.210.40:3000/greeting
-Hello world
 ```
+
+# gPRC
+
+## 1. Build and Run a gRPC Server
+
+```bash
+bazel run //python:greeter_grpc_server
+```
+
+## 2. Build and Run a gRPC Client
+
+```bash
+bazel run //python:greeter_grpc_client
+```
+
+## 3. Compile gPRC Python Stubs
+
+```bash
+bazel build //python:greeter_python_grpc
+```
+
+## 3. Compile gPRC PHP Stubs
+
+```bash
+bazel build //php:greeter_php_grpc
+```
+
 # Misc
 
-## 1. Build all targets in the workspace
+## 1. Build All Targets in the Workspace
 
 ```bash
 bazel build //...
 ```
 
-## 2. Run all tests in the workspace
+## 2. Run All Tests in the Workspace
 
 ```bash
 bazel test //...

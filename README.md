@@ -2,9 +2,7 @@
 
 This is a toy project to make me familiar with [Bazel](https://bazel.build/).
 
-Before everything, we need to [install Bazel](https://docs.bazel.build/versions/main/install.html).
-
-This project uses Bazel with version 4.1.0
+Before everything, we need to [install Bazel](https://docs.bazel.build/versions/main/install.html) of version **4.1.0**.
 
 # C++
 

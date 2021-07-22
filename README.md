@@ -115,13 +115,13 @@ Hello world
 ```
 # Misc
 
-## 1. Build all targets in the workspace
+## 1. Build All Targets in the Workspace
 
 ```bash
 bazel build //...
 ```
 
-## 2. Run all tests in the workspace
+## 2. Run All Tests in the Workspace
 
 ```bash
 bazel test //...

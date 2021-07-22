@@ -96,7 +96,6 @@ Test the web server
 
 ```bash
 curl localhost:3000/greeting
-Hello world
 ```
 
 ## 2. Integrate with Docker
@@ -109,7 +108,6 @@ Test the web server if it is running on 10.17.210.40
 
 ```bash
 curl 10.17.210.40:3000/greeting
-Hello world
 ```
 # Misc
 

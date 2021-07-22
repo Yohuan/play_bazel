@@ -8,7 +8,7 @@ This project uses Bazel with version 4.1.0
 
 # C++
 
-## 1. Build Executable
+## 1. Build an Executable
 
 ```bash
 bazel build //cpp:hello_world
@@ -21,20 +21,20 @@ Execute the binary
 ./bazel-bin/cpp/hello_world yohuan
 ```
 
-## 2. Clean the Build Result
+## 2. Clean the Built Result
 
 ```bash
 bazel clean
 ```
 
-## 3.  Build & Run Executable
+## 3.  Build & Run an Executable
 
 ```bash
 bazel run //cpp:hello_world
 bazel run //cpp:hello_world -- yohuan
 ```
 
-## 4. Build & Run Test
+## 4. Build & Run a Test
 
 ```bash
 bazel test //cpp/lib:test_greeting
@@ -43,7 +43,7 @@ bazel run //cpp/lib:test_greeting
 
 # Python
 
-## 1. Build Executable
+## 1. Build an Executable
 
 ```bash
 bazel build //python:hello_world
@@ -56,20 +56,20 @@ Execute the binary
 ./bazel-bin/python/hello_world yohuan
 ```
 
-## 2. Clean the Build Result
+## 2. Clean the Built Result
 
 ```bash
 bazel clean
 ```
 
-## 3.  Build & Run Executable
+## 3.  Build & Run an Executable
 
 ```bash
 bazel run //python:hello_world
 bazel run //python:hello_world -- yohuan
 ```
 
-## 4. Build & Run Test
+## 4. Build & Run a Test
 
 ```bash
 bazel test //python/lib:test_greeting
@@ -88,7 +88,7 @@ bazel run //python:docker_hello_world
 
 Use python to create a simple web server by [Flask](https://flask.palletsprojects.com/en/2.0.x/).
 
-## 1. Build and Run Web Server
+## 1. Build and Run a Web Server
 
 ```bash
 bazel run //python:app

@@ -12,7 +12,7 @@ Before everything, we need to [install Bazel](https://docs.bazel.build/versions/
 bazel build //cpp:hello_world
 ```
 
-Execute the binary
+Execute the built binary
 
 ```bash
 ./bazel-bin/cpp/hello_world
@@ -47,7 +47,7 @@ bazel run //cpp/lib:test_greeting
 bazel build //python:hello_world
 ```
 
-Execute the binary
+Execute the built binary
 
 ```bash
 ./bazel-bin/python/hello_world
@@ -76,7 +76,7 @@ bazel run //python/lib:test_greeting
 
 ## 5. Integrate with Docker
 
-Build image and run as a container
+Build an image and run as a container
 
 ```bash
 bazel run //python:docker_hello_world
@@ -84,7 +84,7 @@ bazel run //python:docker_hello_world
 
 # Web Server
 
-Use python to create a simple web server by [Flask](https://flask.palletsprojects.com/en/2.0.x/).
+Use python to create a simple web server with [Flask](https://flask.palletsprojects.com/en/2.0.x/).
 
 ## 1. Build and Run a Web Server
 

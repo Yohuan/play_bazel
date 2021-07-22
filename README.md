@@ -89,7 +89,7 @@ Use python to create a simple web server with [Flask](https://flask.palletsproje
 ## 1. Build and Run a Web Server
 
 ```bash
-bazel run //python:app
+bazel run //python:flask_server
 ```
 
 Test the web server
@@ -102,7 +102,7 @@ Hello world
 ## 2. Integrate with Docker
 
 ```bash
-bazel run //python:docker_app
+bazel run //python:docker_flask_server
 ```
 
 Test the web server if it is running on 10.17.210.40
